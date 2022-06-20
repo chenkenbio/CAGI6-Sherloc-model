@@ -221,7 +221,7 @@ for i in `seq $MAX_THREADS`; do
     done & sleep 2
 done
 wait
-$SRC/prepare_roadmap_merge.py ${avinput}.marked.vcf -a ${outdir}/roadmap_histone/${bn}.histone-*-ext.tsv.gz > ${avinput}.features-roadmap.tsv
+$SRC/prepare_roadmap_merge.py ${avinput}.marked.vcf -a ${outdir}/roadmap_histone/${bn}.histone-*-ext.tsv.gz > ${avinput}.features-roadmap.tsv 2> ${avinput}.features-roadmap.tsv.log
 
 
 ## conservation 
@@ -232,9 +232,9 @@ $SRC/prepare_cons.py \
     --bw \
         $hg19_phastCons_100way $hg19_phyloP_100way \
         $hg19_phastCons_46way_primates $hg19_phyloP_46way_primates \
-        $hg19_phastCons_46way_vertebrate $hg19_phyloP_46way_vertebrate > ${avinput}.features-cons-ext.tsv
+        $hg19_phastCons_46way_vertebrate $hg19_phyloP_46way_vertebrate > ${avinput}.features-cons-ext.tsv 2> ${avinput}.features-cons-ext.tsv.log
 
-$SRC/prepare_basic.py $avinput.marked.vcf --start ${avinput}.coding_change.marked.start_change.json  --annovar ${avinput}.exonic_variant_function.clean > ${avinput}.features-basic.tsv
+$SRC/prepare_basic.py $avinput.marked.vcf --start ${avinput}.coding_change.marked.start_change.json  --annovar ${avinput}.exonic_variant_function.clean > ${avinput}.features-basic.tsv 2> ${avinput}.features-basic.tsv.log
 
 $SRC/prepare_all_features.py \
     ${avinput}.features-basic.tsv \
