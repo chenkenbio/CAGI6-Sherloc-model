@@ -23,7 +23,7 @@ The feature file can be found at `output/input.std.avinput.features-ALL.tsv`
 ```
 ./run_prediction.sh output/input.std.avinput.features-ALL.tsv
 ```
-The final prediction will be at `final_test_092921.raw.std.avinput.features-ALL.output.txt`
+The final prediction will be at `input.std.avinput.features-ALL.output.txt`
 
 ## Requirements
 - [ANNOVAR](http://annovar.openbioinformatics.org/)
