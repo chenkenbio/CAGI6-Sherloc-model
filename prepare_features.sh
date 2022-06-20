@@ -184,7 +184,7 @@ $SRC/vcf2bed.py $vcf > ${avinput}.bed
 test -d ${outdir}/chipseq || mkdir -p ${outdir}/chipseq
 for bed in ${ENCODE_CHIPSeq_DB}/ENC*.hg38ToHg19.bed; do
     assay=`basename $bed .hg38ToHg19.bed`
-    bedtools intersect -wo -a ./${avinput}.bed -b $bed > ${outdir}/chipseq/${bn}.${assay}-chipseq.tsv.gz &
+    bedtools intersect -wo -a ./${avinput}.bed -b $bed | gzip - > ${outdir}/chipseq/${bn}.${assay}-chipseq.tsv.gz &
 done
 wait
 $SRC/prepare_chipseq.py ${avinput}.marked.vcf -isec ${outdir}/chipseq/${bn}.*-chipseq.tsv.gz > ${avinput}.features-chipseq.tsv
@@ -193,7 +193,7 @@ $SRC/prepare_chipseq.py ${avinput}.marked.vcf -isec ${outdir}/chipseq/${bn}.*-ch
 test -d ${outdir}/gimme || mkdir -p ${outdir}/gimme
 for bed in ${WORKING_DIR}/data/encode_chipseq_gimme/*gimme.gz; do
     assay=`basename $bed .hg38ToHg19.merged.gimme.gz`
-    bedtools intersect -wo -a $avinput.bed -b $bed > ${outdir}/gimme/${bn}.${assay}-gimme.tsv.gz &
+    bedtools intersect -wo -a $avinput.bed -b $bed | gzip - > ${outdir}/gimme/${bn}.${assay}-gimme.tsv.gz &
 done
 wait
 $SRC/prepare_gimme.py ${avinput}.marked.vcf -isec ${outdir}/gimme/${bn}.*-gimme.tsv.gz > ${avinput}.features-gimme.tsv
