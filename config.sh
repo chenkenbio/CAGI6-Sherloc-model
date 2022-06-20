@@ -12,23 +12,23 @@ export hg19="/home/chenken/db/gencode/GRCh37/GRCh37.primary_assembly.genome.fa"
 export hg38="/home/chenken/db/gencode/GRCh38/GRCh38.primary_assembly.genome.fa"
 export hg19_gtf="/bigdat1/pub/gencode/GRCh37/release_34/gencode.v34lift37.annotation.gtf"
 
-export PSSM_SPOT_PATH="/home/chenken/db/PSSM-HHM-SPOT_DISORDER"
+export PSSM_SPOT_PATH="$WORKING_DIR/data/PSSM-HHM-SPOT_DISORDER"
 
-export ROADMAP_DB="/bigdat1/user/chenken/share/RoadmapEpigenomics/nature2015/Processed_Data/ChIP-seq+DNase-seq/"
+export ROADMAP_DB="$WORKING_DIR/data/roadmap"
 
-export ENCODE_CHIPSeq_DB="/home/chenken/Documents/CAGI6-Sherloc/data/encode-chipseq"
-export ENCODE_eCLIP_DB="/bigdat1/pub/ENCODE/eCLIP"
+export ENCODE_CHIPSeq_DB="$WORKING_DIR/data/encode-chipseq"
+export ENCODE_eCLIP_DB="$WORKING_DIR/data/eCLIP"
 export gtex_eQTL_loci="$WORKING_DIR/data/GTEx.eQTL.v8.hg38to19.merged.bed.gz"
-export gnomAD_AF_DB="/home/chenken/Documents/CAGI6-Sherloc.backup/data/gnomAD.v3"
+export gnomAD_AF_DB="$WORKING_DIR/data/gnomAD.v3"
 
-export uniprot_fasta="/home/chenken/db/uniprot/uniprot_human.fa"
+export uniprot_fasta="$WORKING_DIR/data/uniprot_human.fa"
 
-export hg19_phastCons_100way="/bigdat1/pub/UCSC/hg19/hg19.100way.phastCons.bw"
-export hg19_phyloP_100way="/bigdat1/pub/UCSC/hg19/hg19.100way.phyloP100way.bw"
-export hg19_phastCons_46way_primates="/bigdat1/pub/UCSC/hg19/primates.phastCons46way.bw"
-export hg19_phyloP_46way_primates="/bigdat1/pub/UCSC/hg19/primates.phyloP46way.bw"
-export hg19_phastCons_46way_vertebrate="/bigdat1/pub/UCSC/hg19/vertebrate.phastCons46way.bw"
-export hg19_phyloP_46way_vertebrate="/bigdat1/pub/UCSC/hg19/vertebrate.phyloP46way.bw"
+export hg19_phastCons_100way="$WORKING_DIR/data/ucsc_cons/hg19.100way.phastCons.bw"
+export hg19_phyloP_100way="$WORKING_DIR/data/ucsc/hg19/hg19.100way.phyloP100way.bw"
+export hg19_phastCons_46way_primates="$WORKING_DIR/data/ucsc/hg19/primates.phastCons46way.bw"
+export hg19_phyloP_46way_primates="$WORKING_DIR/data/ucsc/hg19/primates.phyloP46way.bw"
+export hg19_phastCons_46way_vertebrate="$WORKING_DIR/data/ucsc/hg19/vertebrate.phastCons46way.bw"
+export hg19_phyloP_46way_vertebrate="$WORKING_DIR/data/ucsc/hg19/vertebrate.phyloP46way.bw"
 
 
 ## setup mmsplice
