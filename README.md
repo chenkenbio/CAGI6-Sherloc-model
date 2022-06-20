@@ -9,8 +9,8 @@ The model from the SYSU-SAIL group for the CAGI6 Sherloc challenge.
 - [bedtools](https://bedtools.readthedocs.io/en/latest/)  
 - [pyBigWig](https://github.com/deeptools/pyBigWig)  
 - [xgboost](https://xgboost.readthedocs.io/)  
-- [skopt](https://scikit-optimize.github.io/stable/install.html)  
 - [CrossMap](http://crossmap.sourceforge.net/)
+- [skopt](https://scikit-optimize.github.io/stable/install.html)(only for training model)  
 
 
 

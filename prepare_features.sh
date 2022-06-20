@@ -217,7 +217,7 @@ for i in `seq $MAX_THREADS`; do
         $SRC/prepare_roadmap.py \
             ${avinput}.marked.vcf \
             --bed ${avinput}.bed \
-            -bw ${ROADMAP_DB}/${eid}*.bigwig > ${outdir}/roadmap_histone/${bn}.histone-${eid}-ext.tsv.gz 2> ${outdir}/roadmap_histone/${bn}.histone-${eid}-ext.tsv.gz.log
+            -bw ${ROADMAP_DB}/${eid}*.bigwig  2> ${outdir}/roadmap_histone/${bn}.histone-${eid}-ext.tsv.gz.log | gzip - > ${outdir}/roadmap_histone/${bn}.histone-${eid}-ext.tsv.gz
     done & sleep 2
 done
 wait
@@ -249,5 +249,5 @@ $SRC/prepare_all_features.py \
     ${avinput}.features-mmsplice.tsv \
     ${avinput}.features-prot-sim-change.tsv \
     ${avinput}.features-pssm-disorder.tsv \
-    -o ${avinput}.features-ALL.tsv
+    -o ${avinput}.features-ALL.tsv &> ${avinput}.features-ALL.tsv.log
 
