@@ -59,7 +59,7 @@ ${ANNOVAR_BIN}/annotate_variation.pl \
     -buildver ${buildver} \
     ${avinput} \
     -dbtype ensGene \
-    $HOME/db/annovar/humandb 2>> ${avinput}.log
+    $ANNOVAR_DB 2>> ${avinput}.log
 
 $SRC/clean_exonic.py \
     -exonic ${avinput}.exonic_variant_function \
