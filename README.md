@@ -2,6 +2,8 @@
 
 The model from the SYSU-SAIL group for the CAGI6 Sherloc challenge.
 
+**This repository has been archived. See [here](https://github.com/biomed-AI/ML-GVP) for updates.**
+
 
 ## Input
 - vcf: only the first 5 columns are required
